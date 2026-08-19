@@ -1,0 +1,11 @@
+{
+  "error": {
+    "code": "Forbidden",
+    "message": "This tenant does not have a license required to access this API. This request requires an Entra ID P1 or higher license.",
+    "innerError": {
+      "date": "2026-08-18T00:00:00",
+      "request-id": "11111111-2222-3333-4444-555555555555",
+      "client-request-id": "11111111-2222-3333-4444-555555555555"
+    }
+  }
+}

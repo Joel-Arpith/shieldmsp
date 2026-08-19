@@ -1,0 +1,91 @@
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#security/alerts_v2",
+  "value": [
+    {
+      "id": "alert-001",
+      "providerAlertId": "da637000000000001_1",
+      "title": "Suspicious PowerShell command line",
+      "description": "A PowerShell command line with suspicious characteristics was observed.",
+      "severity": "high",
+      "status": "new",
+      "mitreTechniques": ["T1059.001"],
+      "createdDateTime": "2026-08-15T10:00:00Z",
+      "lastUpdateDateTime": "2026-08-15T10:00:00Z",
+      "evidence": [
+        {
+          "@odata.type": "#microsoft.graph.security.deviceEvidence",
+          "deviceDnsName": "WIN10-DESKTOP-01.contoso.com",
+          "mdeDeviceId": "device1-mde-guid",
+          "osPlatform": "Windows10",
+          "healthStatus": "active"
+        }
+      ]
+    },
+    {
+      "id": "alert-002",
+      "providerAlertId": "da637000000000002_1",
+      "title": "Malware detected",
+      "description": "Trojan:Win32/Wacatac.B was detected and quarantined.",
+      "severity": "medium",
+      "status": "inProgress",
+      "mitreTechniques": ["T1204"],
+      "createdDateTime": "2026-08-16T09:00:00Z",
+      "lastUpdateDateTime": "2026-08-16T09:00:00Z",
+      "evidence": [
+        {
+          "@odata.type": "#microsoft.graph.security.deviceEvidence",
+          "deviceDnsName": "WIN10-DESKTOP-01.contoso.com",
+          "mdeDeviceId": "device1-mde-guid",
+          "osPlatform": "Windows10",
+          "healthStatus": "active"
+        }
+      ]
+    },
+    {
+      "id": "alert-003",
+      "providerAlertId": "da637000000000003_1",
+      "title": "Unfamiliar sign-in properties",
+      "description": "A user signed in with properties not seen recently.",
+      "severity": "low",
+      "status": "resolved",
+      "mitreTechniques": ["T1078"],
+      "createdDateTime": "2026-08-14T08:00:00Z",
+      "lastUpdateDateTime": "2026-08-14T08:00:00Z",
+      "evidence": [
+        {
+          "@odata.type": "#microsoft.graph.security.deviceEvidence",
+          "deviceDnsName": "WIN10-DESKTOP-01.contoso.com",
+          "mdeDeviceId": "device1-mde-guid",
+          "osPlatform": "Windows10",
+          "healthStatus": "active"
+        }
+      ]
+    },
+    {
+      "id": "alert-004",
+      "providerAlertId": "da637000000000004_1",
+      "title": "Impossible travel activity",
+      "description": "Sign-ins from geographically distant locations within an implausible time window.",
+      "severity": "informational",
+      "status": "new",
+      "mitreTechniques": ["T1078.004"],
+      "createdDateTime": "2026-08-16T12:00:00Z",
+      "lastUpdateDateTime": "2026-08-16T12:00:00Z",
+      "evidence": [
+        {
+          "@odata.type": "#microsoft.graph.security.deviceEvidence",
+          "deviceDnsName": "LT-FINANCE-07.contoso.com",
+          "mdeDeviceId": "device2-mde-guid",
+          "osPlatform": "Windows11",
+          "healthStatus": "impairedCommunication"
+        },
+        {
+          "@odata.type": "#microsoft.graph.security.userEvidence",
+          "userAccount": {
+            "userPrincipalName": "jsmith@contoso.com"
+          }
+        }
+      ]
+    }
+  ]
+}
